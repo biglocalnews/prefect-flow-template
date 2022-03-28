@@ -83,6 +83,8 @@ Shipping your code to the production environment preferred by this template requ
 
 First you must install Google Cloud’s [gcloud](https://cloud.google.com/sdk/docs/install) command line tool and successfully use it to log into an account with the hosting service.
 
+### Workload Identity Federation
+
 If you don't have one already, use it to create a [Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation) that will allow your GitHub Action to log in to your Google Cloud account. The instructions below are cribbed from the documentation for the [google-github-actions/auth](https://github.com/google-github-actions/auth#setting-up-workload-identity-federation) Action. Follow along in your terminal.
 
 The first command creates a [service account](https://cloud.google.com/iam/docs/service-accounts) with Google. I will save the name I make up, as well as my Google project id, as environment variables for reuse. You should adapt the variables here, and others as we continue, to fit your project and preferred naming conventions.
