@@ -81,7 +81,7 @@ pipenv run prefect register --project 'Your Prefect Project' -p ./flow.py
 
 Shipping your code to the production environment preferred by this template requires a few introductory steps.
 
-First you must install Google Cloud’s [gcloud](https://cloud.google.com/sdk/docs/install) command line tool and successfully use it to log into a an account with the hosting service.
+First you must install Google Cloud’s [gcloud](https://cloud.google.com/sdk/docs/install) command line tool and successfully use it to log into an account with the hosting service.
 
 If you don't have one already, use it to create a [Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation) that will allow your GitHub Action to log in to your Google Cloud account. The instructions below are cribbed from the documentation for the [google-github-actions/auth](https://github.com/google-github-actions/auth#setting-up-workload-identity-federation) Action. Follow along in your terminal.
 
