@@ -187,14 +187,18 @@ gcloud projects get-iam-policy $PROJECT_ID \
     --filter="bindings.members:${SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com"
 ```
 
-* Create a Google Artifact Registry repository for a Docker image
-* Spin up a Prefect agent to orchestrate your flows
-* Create an API key at Prefect.io
+### Connect a Prefect API key
 
-Once all that is done, you'll want to set four secrets in your repository's settings. They will be used to deploy your code from GitHub into Google Cloud and Prefect.
+TK
 
 * `PREFECT_API_KEY`: An API key created in your Prefect dashboard
 * `PREFECT_PROJECT_NAME`: The name of your Prefect project
+
+### Create a Google Artifact Registry repository
+
+Go to the [Google Artifact Registry](https://console.cloud.google.com/artifacts) interface within your project. Create a new repository by hitting the button at the top. Tell Google it will be in the Docker format and then select a region. It doesn't matter which region. Save the name you give the repo and the region's abbreviation, which will be something like `us-west1`. 
+
+### Configure your flow to connect with Google Artifact Registry
 
 You'll also need to edit the `get_storage` function in flow.py to include your Google Artifact Registry target. This is where the Docker image with your Python code will be shipped during a release.
 
@@ -209,11 +213,13 @@ You'll also need to edit the `get_storage` function in flow.py to include your G
 ),
 ```
 
-With all that in hand, you should be ready to release.
+### Make a release
+
+Phew. That's it. Not you can go to the releases panel for your repo on GitHub, punch in a new version tag like `0.0.1` and hit the big green button. That should trigger a new process in your Actions tab, where the push of the tagged commit will trigger the release.
 
 ## Releasing
 
-OTheur release process is automated as a [continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) via the [GitHub Actions](https://github.com/features/actions) framework. The logic that governs the process is stored [in the `workflows` directory](tree/.github/workflows/continuous-deployment.yml).
+Our release process is automated as a [continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) via the [GitHub Actions](https://github.com/features/actions) framework. The logic that governs the process is stored [in the `workflows` directory](tree/.github/workflows/continuous-deployment.yml).
 
 That means that everything necessary to make a release can be done with a few clicks on the GitHub website. All you need to do is make a tagged release at  then wait for the computers to handle the job.
 
