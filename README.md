@@ -90,7 +90,7 @@ Shipping your code to the production environment preferred by this template requ
 
 These steps are arcane. They will be frustrating. But you will likely only have to do them once.
 
-While not included here, all of the steps are documented in the following blog posts by Big Local News.
+While not included here, most of the steps are documented in the following blog posts by Big Local News.
 
 * [How to push tagged Docker releases to Google Artifact Registry with a GitHub Action](https://gist.github.com/palewire/12c4b2b974ef735d22da7493cf7f4d37)
 * [How to deploy a Prefect agent to Google Kubernetes Engine](https://gist.github.com/palewire/072513a9940478370697323c0d15c6ec)
