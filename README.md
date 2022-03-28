@@ -77,6 +77,30 @@ Future changes to the flow will need to registered with the local server, as bef
 pipenv run prefect register --project 'Your Prefect Project' -p ./flow.py
 ```
 
+## Deployment
+
+Shipping your code to the production environment preferred by this template requires a few introductory steps.
+
+1. Install Google Cloud’s [gcloud](https://cloud.google.com/sdk/docs/install) command line tool
+2. Configure a Workload Identity Federation and Service Account with permission to access Google Artifact Registry
+3. Create a Google Artifact Registry repository for a Docker image
+4. Give your GitHub repository permission to use the service account to access Google Artifact Registry
+5. Spin up a Prefect agent to orchestrate your flows
+
+These steps are arcane. They will be frustrating. But you will likely only have to do them once.
+
+While not included here, all of the steps are documented in the following blog posts by Big Local News.
+
+* [How to push tagged Docker releases to Google Artifact Registry with a GitHub Action](https://gist.github.com/palewire/12c4b2b974ef735d22da7493cf7f4d37)
+* [How to deploy a Prefect agent to Google Kubernetes Engine](https://gist.github.com/palewire/072513a9940478370697323c0d15c6ec)
+
+Once all that is done, you'll want to set four secrets in your repository's settings. They will be used to deploy your code from GitHub into Google Cloud and Prefect.
+
+* `PREFECT_API_KEY`: An API key created in your Prefect dashboard
+* `PREFECT_PROJECT_NAME`: The name of your Prefect project
+* `GCLOUD_WORKLOAD_IDENTITY_PROVIDER`: The name of the Workload Identity Provider created by Google
+* `GCLOUD_SERVICE_ACCOUNT`: The name of the service account created by Google
+
 
 
 With all that in hand, you should be ready to release.
