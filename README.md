@@ -6,12 +6,12 @@ This repository contains all the fundamentals needed to develop and deploy a Pyt
 
 It contains:
 
-🌊 A `flow.py` file with an example function that’s ready to run
-🚧 A local development configuration that can run independently
-☁️ A cloud production configuration for a Google Kubernetes Engine executor with Docker storage
-📈 Easy vertical scaling of production workers via Dask
-🧪 Unit tests via pytest
-🚢 Automated deployment via GitHub releases and actions
+* 🌊 A `flow.py` file with an example function that’s ready to run
+* 🚧 A local development configuration that can run independently
+* ☁️ A cloud production configuration for a Google Kubernetes Engine executor with Docker storage
+* 📈 Easy vertical scaling of production workers via Dask
+* 🧪 Unit tests via pytest
+* 🚢 Automated deployment via GitHub releases and actions
 
 The repository does not include the necessary configuration of a [Prefect Agent](https://docs.prefect.io/orchestration/agents/overview.html) to orchestrate flow runs.
 
