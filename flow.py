@@ -77,7 +77,7 @@ def get_run_config(env: str = "production"):
             # The flow is run here on your laptop
             env={
                 # Print logs from our dependencies
-                "PREFECT__LOGGING__EXTRA_LOGGERS": "['warn', 'bln']",
+                "PREFECT__LOGGING__EXTRA_LOGGERS": "[]",
                 # Print debugging level code from Prefect
                 "PREFECT__LOGGING__LEVEL": "DEBUG",
             },
@@ -88,7 +88,7 @@ def get_run_config(env: str = "production"):
             # The flow is run as a job in our k8s cluster
             env={
                 # Print logs from our dependencies
-                "PREFECT__LOGGING__EXTRA_LOGGERS": "['warn', 'bln']",
+                "PREFECT__LOGGING__EXTRA_LOGGERS": "[]",
                 # Print debugging level code from Prefect
                 "PREFECT__LOGGING__LEVEL": "DEBUG",
             },
