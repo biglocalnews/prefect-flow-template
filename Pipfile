@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+prefect = {extras = ["google", "kubernetes"], version = "*"}
+
+[dev-packages]
+pre-commit = "*"
+flake8-bugbear = "*"
+flake8 = "*"
+flake8-docstrings = "*"
+mypy = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-vcr = "*"
+black = "*"
+
+[requires]
+python_version = "3.9"
