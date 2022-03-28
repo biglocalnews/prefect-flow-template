@@ -125,14 +125,14 @@ def get_executor(env: str = "production"):
 
 
 with prefect.Flow(
-    "WARN Act Notices ETL",
+    "Your Prefect Flow",
     storage=get_storage(PREFECT_FLOW_ENV),
     run_config=get_run_config(PREFECT_FLOW_ENV),
     executor=get_executor(PREFECT_FLOW_ENV),
 ) as flow:
     # Get logger
     logger = prefect.context.get("logger")
-    logger.info("Running WARN Act Notices ETL flow")
+    logger.info("Running Your Prefect Flow")
 
     # Log the environment
     backend = prefect.context.get("running_with_backend")
