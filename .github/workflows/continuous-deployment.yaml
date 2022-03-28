@@ -109,7 +109,7 @@ jobs:
         uses: google-github-actions/auth@v0
         with:
           token_format: access_token
-          workload_identity_provider: ${{ secrets.GGLOUD_WORKLOAD_IDENTITY_PROVIDER }}
+          workload_identity_provider: ${{ secrets.GCLOUD_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT }}
           access_token_lifetime: 300s
 
@@ -122,4 +122,4 @@ jobs:
 
       - id: register
         name: Register flow
-        run: pipenv run prefect register --project 'Your Prefect Project' -p ./flow.py
+        run: pipenv run prefect register --project '${{ secrets.PREFECT_PROJECT_NAME }}' -p ./flow.py

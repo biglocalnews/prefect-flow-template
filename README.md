@@ -77,6 +77,10 @@ Future changes to the flow will need to registered with the local server, as bef
 pipenv run prefect register --project 'Your Prefect Project' -p ./flow.py
 ```
 
+
+
+With all that in hand, you should be ready to release.
+
 ## Releasing
 
 OTheur release process is automated as a [continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) via the [GitHub Actions](https://github.com/features/actions) framework. The logic that governs the process is stored [in the `workflows` directory](tree/.github/workflows/continuous-deployment.yml).
