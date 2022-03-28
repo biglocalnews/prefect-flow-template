@@ -1,4 +1,4 @@
-A template repository with all the fundamentals needed to develop and deploy a Python data-processing routine to run in a [Prefect](prefect.io) pipeline.
+A template repository with all the fundamentals needed to develop and deploy a Python data-processing routine for [Prefect](prefect.io) pipelines.
 
 Learn how the system works — and how you can install it yourself — in the user manual at [github.com/biglocalnews/prefect-flow-template/wiki](https://github.com/biglocalnews/prefect-flow-template/wiki)
 
