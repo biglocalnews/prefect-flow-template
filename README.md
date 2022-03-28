@@ -1,4 +1,4 @@
-A template for [Prefect](prefect.io) [flows](https://docs.prefect.io/orchestration/flow_config/overview.html).
+A template for [Prefect](prefect.io) [flows](https://docs.prefect.io/orchestration/flow_config/overview.html)
 
 ## How it works
 
@@ -76,3 +76,7 @@ Future changes to the flow will need to registered with the local server, as bef
 ```bash
 pipenv run prefect register --project 'Your Prefect Project' -p ./flow.py
 ```
+
+## About
+
+The project is sponsored by [Big Local News](https://biglocalnews.org/#/about), a program at Stanford University that collects data for impactful journalism. The code is maintained by [Ben Welsh](https://palewi.re/who-is-ben-welsh/), a visiting data journalist from the Los Angeles Times.
