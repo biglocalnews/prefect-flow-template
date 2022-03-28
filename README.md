@@ -51,7 +51,7 @@ Start the local server.
 pipenv run prefect server start
 ```
 
-Open a new terminal, move into your code directory and create a local version of our Prefect project on your local machine. The project name is set in your `flow.py` file. If you'd like to customize it right away, edit it there and insert your name in the code below.
+Open a new terminal, move into your code directory and create a local version of our Prefect project on your local machine.
 
 ```sh
 pipenv run prefect create project 'Your Prefect Project'
