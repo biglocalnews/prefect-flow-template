@@ -187,18 +187,18 @@ gcloud projects get-iam-policy $PROJECT_ID \
     --filter="bindings.members:${SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com"
 ```
 
-### Connect a Prefect API key
+### Prefect API key
 
 TK
 
 * `PREFECT_API_KEY`: An API key created in your Prefect dashboard
 * `PREFECT_PROJECT_NAME`: The name of your Prefect project
 
-### Create a Google Artifact Registry repository
+### Google Artifact Registry repository
 
 Go to the [Google Artifact Registry](https://console.cloud.google.com/artifacts) interface within your project. Create a new repository by hitting the button at the top. Tell Google it will be in the Docker format and then select a region. It doesn't matter which region. Save the name you give the repo and the region's abbreviation, which will be something like `us-west1`. 
 
-### Configure your flow to connect with Google Artifact Registry
+### Flow storage configuration
 
 You'll also need to edit the `get_storage` function in flow.py to include your Google Artifact Registry target. This is where the Docker image with your Python code will be shipped during a release.
 
@@ -213,7 +213,7 @@ You'll also need to edit the `get_storage` function in flow.py to include your G
 ),
 ```
 
-### Make a release
+### Do it live
 
 Phew. That's it. Not you can go to the releases panel for your repo on GitHub, punch in a new version tag like `0.0.1` and hit the big green button. That should trigger a new process in your Actions tab, where the push of the tagged commit will trigger the release.
 
