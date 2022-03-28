@@ -101,7 +101,18 @@ Once all that is done, you'll want to set four secrets in your repository's sett
 * `GCLOUD_WORKLOAD_IDENTITY_PROVIDER`: The name of the Workload Identity Provider created by Google
 * `GCLOUD_SERVICE_ACCOUNT`: The name of the service account created by Google
 
+You'll also need to edit the `get_storage` function in flow.py to include your Google Artifact Registry target. This is where the Docker image with your Python code will be shipped during a release.
 
+```
+    "production": Docker(
+        # An image containing the flow's code, as well as our Python dependencies,
+        # will be compiled when `pipenv run prefect register` is run and then
+        # uploaded to our repository on Google Artifact Registry.
+        registry_url="your-registry-url",  # <-- Here's the docker registry where it will go
+        image_name="your-google-artifact-registry-image-name", # <-- Here's the path within the registry to your image
+        python_dependencies=[],  # <-- If you have any Python dependencies like `requests` you should add them here
+    ),
+```
 
 With all that in hand, you should be ready to release.
 
