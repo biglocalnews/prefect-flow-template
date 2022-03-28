@@ -86,6 +86,7 @@ Shipping your code to the production environment preferred by this template requ
 3. Create a Google Artifact Registry repository for a Docker image
 4. Give your GitHub repository permission to use the service account to access Google Artifact Registry
 5. Spin up a Prefect agent to orchestrate your flows
+6. Create an API key at Prefect.io
 
 These steps are arcane. They will be frustrating. But you will likely only have to do them once.
 
