@@ -130,13 +130,5 @@ with prefect.Flow(
     run_config=get_run_config(PREFECT_FLOW_ENV),
     executor=get_executor(PREFECT_FLOW_ENV),
 ) as flow:
-    # Get logger
-    logger = prefect.context.get("logger")
-    logger.info("Running Your Prefect Flow")
-
-    # Log the environment
-    backend = prefect.context.get("running_with_backend")
-    logger.info(f"Executing on {backend} backend")
-
     # Run example task
     hello_task()
