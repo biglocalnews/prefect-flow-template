@@ -55,7 +55,7 @@ def get_storage(env: str = "production"):
             # will be compiled when `pipenv run prefect register` is run and then
             # uploaded to our repository on Google Artifact Registry.
             registry_url="your-region-docker.pkg.dev",  # <-- Here's the docker registry where it will go
-            image_name="your-project-id/your-docker-repo/your-docker-image-name", # <-- Here's the path within the registry to your image
+            image_name="your-project-id/your-docker-repo/your-docker-image-name",  # <-- Here's the path within the registry to your image
             python_dependencies=[],
         ),
     }
