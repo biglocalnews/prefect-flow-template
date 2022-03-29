@@ -6,8 +6,8 @@ Learn how the system works — and how you can install it yourself — in the us
 
 * [How it works](https://github.com/biglocalnews/prefect-flow-template/wiki)
 * [Getting Started](https://github.com/biglocalnews/prefect-flow-template/wiki/1.-Getting-Started)
-* [Deployment](https://github.com/biglocalnews/prefect-flow-template/wiki/2.-Deployment)
-* [Releasing](https://github.com/biglocalnews/prefect-flow-template/wiki/3.-Releasing)
+* [Google Cloud Deployment Configuration](https://github.com/biglocalnews/prefect-flow-template/wiki/2.-Google-Cloud-Deployment-Configuration)
+* [Releasing updates](https://github.com/biglocalnews/prefect-flow-template/wiki/3.-Releasing-updates)
 
 ## About
 
